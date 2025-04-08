@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('../frontend/public'));
+app.use(express.static('./frontend/public'));
 
 app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
@@ -45,7 +45,7 @@ app.use(helmet({
 
 
 // set ejs as the view engine in the frontend directory
-app.set('views', '../frontend/views');
+app.set('views', './frontend/views');
 
 app.set('view engine', 'ejs');
 
